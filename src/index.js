@@ -5,6 +5,7 @@ import App from "./App";
 import CardList from "./components/CardList";
 import Quotes from "./components/Quotes";
 import quimage from "./assets/images/logo1.png";
+import Biodata from "./components/Cardlist1";
 
 const quotes="maaf kami kurang pro jadi seperti ini jadinya :)";
 const kendaraan = [
@@ -13,7 +14,11 @@ const kendaraan = [
   {jenis :'Truk',roda:'6',warna:'orange',image: 'https://ktbfuso.co.id/assets/uploads/categories/Bak-Kayu-LDT.png', SIM : 'B'},
   {jenis :'Becak',roda:'3',warna:'merah',image: 'https://assets-a1.kompasiana.com/items/album/2020/09/06/becak-ok-5f54e7fbbb83122bf90770c2.jpg', SIM : '-'},
   ];
-
+  
+  const data = [
+    {quote : '"Jika kamu tak mampu meyakinkan dan memukau orang dengan kepintaranmu,\n bingungkan dia dengan kebodohanmu."', author : '-Septian', image : '/septian2.JPG', nama : 'septian nugraha', nim : '21120118130078'},
+    {quote : '"Jika seseorang melemparmu dengan batu,\n balaslah dengan bunga.. sekalian dengan potnya."', author : '-Dimas', image : '/topek.jpg', nama : 'Taufiq Dimas R', nim : '21120118140093'}
+];
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,6 +29,11 @@ ReactDOM.render(
   ))
   }
   </div>
+ 
+  {data.map((item,index) => (
+<Biodata id={index} quote={item.quote} author={item.author} image={item.image} nama={item.nama} nim={item.nim} />
+))
+}
     <Quotes author="Kelompok 30" quotes={quotes} quimage={quimage} />
  
   </React.StrictMode>,
