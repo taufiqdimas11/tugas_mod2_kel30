@@ -1,6 +1,6 @@
 import React from "react";
 export default function CardList(props) {
-    const { jenis, roda, warna, isNameBold, image, id } = props;    
+    const { jenis, roda, warna, isNameBold, image, id, SIM } = props;    
     return (
         <div key={id} className="bg-white shadow">
             <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -20,9 +20,14 @@ export default function CardList(props) {
                                 </h3>
                                 <p className="mt-1 text-sm text-gray-500">roda : {roda}</p>
                             </div>
+                            <div>
                             <p className="text-sm font-medium text-gray-900">
                                 warna : {warna}
                             </p>
+                            <p className="text-sm font-small text-gray-900"> 
+                                SIM yang dibutuhkan : {SIM}
+                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
